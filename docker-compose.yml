@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  evo-admin:
+    container_name: evo-admin
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "$GRAPHQL_PORT:$GRAPHQL_PORT"
+    env_file: .env
+    restart: always

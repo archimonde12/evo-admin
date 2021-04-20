@@ -1,0 +1,34 @@
+{
+  "name": "evo-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:watch": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts",
+    "dep": "docker-compose -f docker-compose.yml up --build -d",
+    "dep:log": "docker-compose -f docker-compose.yml up --build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mongodb": "^3.6.12",
+    "@types/node": "^14.14.41",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@apollo/federation": "^0.23.0",
+    "@sentry/node": "^6.2.5",
+    "apollo-server": "^2.23.0",
+    "dotenv": "^8.2.0",
+    "graphql": "^15.5.0",
+    "mongodb": "^3.6.6",
+    "redis": "^3.1.1"
+  }
+}
