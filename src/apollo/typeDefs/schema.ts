@@ -326,7 +326,7 @@ export const typeDefs = gql`
     # Query and Mutation
     
     type Query {
-        evo_admin_verify_email_check(email:String):String
+        evo_admin_verify_email(email:String):String
         evo_admin_user_email_check(username:String):String
         evo_admin_2FA_remove(slug:String):String
         evo_admin_user_action_history_check(slug:String):String

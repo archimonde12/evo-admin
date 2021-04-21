@@ -36,6 +36,21 @@ export type RecentGame = {
     updatedAt: Date
 }
 
+export type Lock={
+    id: string
+    status: boolean
+    duration?: number
+    lockDate: number
+    lockReason?: string
+    lockByAdmin: string
+    lockWithdraw?:Boolean
+    lockTransfer?:Boolean
+    lockConvert?:Boolean
+    unlockDate?: Date
+    unlockReason?: string
+    unlockByAdmin?: string
+}
+
 /**
  * @username
  * @slug
@@ -70,17 +85,7 @@ export interface Account {
         google: { email: string } | null
     }
 
-    lock?: {
-        id: string
-        status: boolean
-        duration?: number
-        lockDate: Date
-        lockReason?: string
-        lockByAdmin: string
-        unlockDate?: Date
-        unlockReason?: string
-        unlockByAdmin?: string
-    }
+    lock?: Lock
     status?: string
     // assets: {
     //     usdt: Asset
@@ -124,17 +129,7 @@ export interface AccountInMongo {
         google: { email: string } | null
     }
     status?: string
-    lock?: {
-        id: string
-        status: boolean
-        duration?: number
-        lockDate: Date
-        lockReason?: string
-        lockByAdmin: string
-        unlockDate?: Date
-        unlockReason?: string
-        unlockByAdmin?: string
-    }
+    lock?: Lock
 
     // assets: {
     //     usdt: Asset

@@ -24,7 +24,7 @@ const collections = {
     convertHistories: 'convertHistories',
     brickMessages: 'brickMessages',
     tempAccounts: 'tempAccounts',
-    betDetails: 'betDetails'
+    betDetails: 'betDetails',
 }
 
 const connectMongo = async () => {
